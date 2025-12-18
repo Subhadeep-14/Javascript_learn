@@ -1,0 +1,40 @@
+{
+    "Harry Potter": {
+        "physics":85,
+        "maths":90,
+        "computer":95,
+        "age":19
+
+    },
+    "Hermione Granger": {
+        "physics":95,
+        "maths":100,
+        "computer":98,
+        "age":19
+
+    },
+    "Luna Lovegood": {
+        "physics":80,
+        "maths":85,
+        "computer":88,
+        "age":19
+
+    }
+
+}
+
+
+
+{
+    "Students":[
+         {
+        "physics":85,
+        "maths":90,
+        "computer":95,
+        "age":19,
+        "name":"Harry Potter"
+
+    },
+    ]
+
+}
