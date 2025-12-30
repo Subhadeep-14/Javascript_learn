@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one">Hi</p>
+    <p id="three">Hey    </p>
+    <input type="text" id="inputbox" placeholder="Enter your name">
+    <button id="two">
+        Click Me
+
+    </button>
+    <button id="four">
+            Time Out
+    </button>
+    <button id="five">
+            Interval
+    </button>
+    <button id="six">
+           Clear Interval
+    </button>
+    <p id="Testing">
+        Testing 
+    </p>
+</body>
+<script>
+    let c=0;
+    let intervalId=null;
+    let name=document.getElementById("inputbox");
+    let para=document.getElementById("one");
+    let para1=document.getElementById("three");
+    let button=document.getElementById("two");
+    let timeoutButton=document.getElementById("four");
+    let intervalButton=document.getElementById("five");
+    let testingPara=document.getElementById("Testing");
+    let clearIntervalButton=document.getElementById("six");
+
+    button.addEventListener("click",function(){
+        para1.textContent="Hello <b>Get Lost</b>"+name.value;
+         para.innerHTML = " <b>Get Lost</b>"+name.value;
+         console.log("The name input is :"+name);
+    })
+    function  timeoutFunc(){
+        //setTimeout(functionlogic,duration(ms));
+        testingPara.textContent="Updated using set Timeout after 2sec"
+
+
+    }
+    timeoutButton.addEventListener("click",function(){
+        setTimeout(timeoutFunc,2000);
+    })
+
+    function  intervalFunc(){
+       // setInterval(functionlogic,duration(ms))
+        testingPara.textContent=`Updated using Interval . counter=${c} `
+        c+=1;
+
+    }
+    intervalButton.addEventListener("click",function(){
+        intervalId=setInterval(intervalFunc,2000);
+        console.log(intervalId);
+    })
+    function clearIntervalFunc(){
+        clearInterval(intervalId);
+        intervalId=null;
+
+    }
+    clearIntervalButton.addEventListener("click",clearIntervalFunc)
+
+
+    </script>
+
+</html>
