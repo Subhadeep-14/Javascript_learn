@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter a value" id="search" value="" />
+    <p id="para"></p>
+    <input type="text" placeholder="Enter a value" id="search1" value="" />
+    <script>
+        let inputSearch=document.getElementById("search");
+        let paragraph=document.getElementById("para");
+        inputSearch.addEventListener("input",()=>{
+            console.log("Typing");
+            paragraph.textContent=`You type: ${inputSearch.value}`;
+
+        })
+
+        let inputSearch2=document.getElementById("search1");
+        inputSearch2.addEventListener("keydown",(e)=>{
+            console.log("You Enter ",e.key);
+            if(e.key==="Enter"){
+                alert(`Yaya Toure ${inputSearch.value}`);
+            }
+        })
+
+        document.addEventListener("DOMContentLoaded",()=>{
+            console.log("page has been loaded");
+        })
+    </script>
+  </body>
+</html>
